@@ -1,4 +1,3 @@
-/* Reset e Estilos Globais */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +6,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #000; /* Fundo escuro principal */
-    color: #E0E0E0; /* Cor de texto clara principal */
+    background-color: #121212; /* Fundo escuro geral */
+    color: #E0E0E0;
     line-height: 1.6;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1200px; /* Pode ser aumentado para a seção hero se necessário */
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -28,47 +27,20 @@ ul {
     list-style: none;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 .btn {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-login {
-    background-color: #3B44F6; /* Azul para botão de login */
-    color: #FFFFFF;
-    margin-left: 10px;
-}
-
-.btn-login:hover {
-    background-color: #2563EB;
-}
-
-.btn-register {
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
-    margin-left: 10px;
-}
-
-.btn-register:hover {
-    background-color: #3B82F6;
-    color: #FFFFFF;
+    font-size: 0.85rem;
 }
 
 /* Header */
 header {
-    background-color: #1E1E1E; /* Um pouco mais claro que o body para destacar */
+    background-color: #1E1E1E;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -82,143 +54,221 @@ header .container {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.8em;
-    font-weight: 900;
-    color: #FFFFFF;
-}
-
-.logo-sports {
-    font-weight: 300;
-    color: #3B82F6; /* Azul no "SPORTS" */
+.logo svg {
+    fill: white; /* Garante que o logo seja branco */
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
 }
 
 header nav ul {
     display: flex;
+    align-items: center;
 }
 
 header nav ul li a {
-    padding: 10px 15px;
+    padding: 10px 12px;
     color: #A0A0A0;
     font-weight: 500;
     transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 header nav ul li a:hover,
-header nav ul li a.active {
+header nav ul li a.current-page { /* Adicionada classe para página ativa */
     color: #FFFFFF;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn-login {
+    background-color: #3B44F6;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.btn-login:hover {
+    background-color: #2c35c4;
+}
+
+.btn-register {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-left: 10px;
+}
+.btn-register:hover {
+    background-color: #fff;
+    color: #3B44F6;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #000000; /* Fundo preto para o Hero */
-    padding: 60px 0 40px; /* Aumentar padding inferior */
-    text-align: left;
+    background-color: #000000;
+    padding: 20px 0 40px;
     position: relative;
-    overflow: hidden; /* Para elementos gráficos que podem vazar */
+    overflow: hidden;
+    min-height: 70vh; /* Garante altura mínima */
 }
 
-.hero .container {
+.hero > .container { /* Container direto da seção hero */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    max-width: 1300px; /* Aumenta um pouco a largura máxima para a hero */
 }
 
 .hero-content {
-    max-width: 50%;
+    flex: 0 0 35%; /* Espaço para o conteúdo à esquerda */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 3; /* Acima da imagem principal */
 }
 
 .promotion-tag {
-    display: inline-block;
-    background-color: #3B82F6;
+    background-color: #D90429; /* Vermelho como na referência */
     color: #FFFFFF;
-    padding: 5px 15px;
+    padding: 8px 15px;
     font-size: 0.9em;
-    font-weight: 500;
-    border-radius: 3px;
-    margin-bottom: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-.hero h1 {
-    font-size: 4.5em; /* Ajustar tamanho da fonte */
+.hero-main-text-overlay { /* "Jumpman" vermelho */
+    font-size: clamp(3.5rem, 9vw, 6rem);
     font-weight: 900;
-    color: #FFFFFF;
-    line-height: 1.1;
-    margin-bottom: 10px;
+    color: #D90429;
     text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 8px;
 }
 
-.hero .text-red {
-    color: #E53E3E; /* Vermelho para JUMPMAN */
-}
-
-.hero p {
-    font-size: 1.1em;
-    color: #A0A0A0;
+.hero-subtitle-overlay { /* "Basketball Shoes" */
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    font-weight: 300;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     margin-bottom: 30px;
 }
 
-.hero-actions .btn {
-    margin-right: 15px;
-    padding: 12px 25px;
-    font-size: 0.9em;
+.hero-actions {
+    display: flex;
+    gap: 15px;
 }
 
-.btn-primary {
+.hero-actions .btn-primary { /* "ADD TO CART" */
     background-color: #FFFFFF;
     color: #121212;
+    padding: 12px 22px;
 }
-.btn-primary:hover {
+.hero-actions .btn-primary:hover {
     background-color: #E0E0E0;
 }
 
-.btn-secondary {
-    background-color: #333333;
+.hero-actions .btn-secondary { /* "BUY NOW" */
+    background-color: #000000; /* Fundo preto */
     color: #FFFFFF;
-    border: 1px solid #555555;
+    border: 1.5px solid #FFFFFF; /* Borda branca */
+    padding: 12px 22px;
 }
-.btn-secondary:hover {
-    background-color: #444444;
+.hero-actions .btn-secondary:hover {
+    background-color: #333333; /* Levemente mais claro no hover */
+    border-color: #FFFFFF;
 }
 
 .hero-image-area {
+    flex: 1 1 60%; /* Espaço para a imagem e variantes */
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza a imagem se ela for menor */
+    min-height: 450px;
 }
 
-.main-shoe {
-    width: 100%;
-    margin-bottom: 20px; /* Espaço para os thumbnails */
+.main-shoe { /* Sua imagem principal 'assets/background home 1.png' */
+    max-width: 100%;
+    max-height: 550px; /* Ajuste conforme o tamanho da sua imagem */
+    object-fit: contain;
+    display: block;
+    z-index: 1; /* Atrás das setas e variantes */
+}
+
+.slider-arrow {
+    background-color: rgba(40, 40, 40, 0.5);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5; /* Acima da imagem principal */
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+}
+.slider-arrow:hover {
+    background-color: rgba(60, 60, 60, 0.8);
+}
+
+.prev-arrow-hero {
+    left: 5%; /* Posição da seta esquerda (ajuste conforme a imagem) */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next-arrow-hero {
+    /* Posição da seta direita (ajuste, deixando espaço para variantes se necessário) */
+    right: 20%; /* Aumentado para dar espaço para as variantes à direita da seta */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .shoe-variants {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Espaço entre thumbnails */
     position: absolute;
-    bottom: -30px; /* Ajustar para sobrepor levemente ou ficar abaixo */
-    left: 50%;
-    transform: translateX(-50%);
+    right: 15px; /* Colado à direita da .hero-image-area */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 4; /* Acima da imagem principal */
 }
 
 .variant-thumb {
-    width: 60px; /* Tamanho dos thumbnails */
-    height: 60px;
+    width: 65px;
+    height: 65px;
     object-fit: contain;
-    background-color: #222; /* Fundo para thumbnails */
-    border-radius: 5px;
+    background-color: rgba(30, 30, 30, 0.7); /* Fundo para thumbnails */
+    border-radius: 8px;
     padding: 5px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.variant-thumb:hover {
+.variant-thumb:hover, .variant-thumb.active-variant {
     transform: scale(1.1);
+    border-color: #FFFFFF; /* Borda branca ao selecionar/hover */
 }
 
 .slider-dots {
     text-align: center;
-    margin-top: 50px; /* Espaço acima dos dots */
+    margin-top: 20px; /* Espaço acima dos dots */
+    position: relative;
+    z-index: 5;
 }
 
 .dot {
@@ -232,14 +282,19 @@ header nav ul li a.active {
 }
 
 .dot.active-dot {
-    background-color: #3B82F6;
+    background-color: #3B82F6; /* Azul como na referência */
 }
 
 
-/* Product Sections */
+/* Product Sections (Estilos originais do usuário) */
 .top-items, .more-products {
     padding: 50px 0;
 }
+/* Cor de fundo das seções de produto precisa ser escura */
+.top-items, .promo-banner, .more-products {
+    background-color: #121212; /* Ou outra cor escura se preferir */
+}
+
 
 .section-header {
     display: flex;
@@ -251,21 +306,20 @@ header nav ul li a.active {
 .section-header h2 {
     font-size: 2em;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #FFFFFF; /* Texto branco para seções escuras */
 }
 
 .carousel-nav .nav-arrow {
-    background: #333;
-    color: #fff;
+    background: #333333; /* Mais escuro */
+    color: #FFFFFF; /* Texto branco */
     border: none;
     padding: 8px 12px;
     margin-left: 10px;
-    border-radius: 3px;
+    border-radius: 24px;
     cursor: pointer;
 }
-
 .carousel-nav .nav-arrow:hover {
-    background: #444;
+    background: #444444;
 }
 
 .product-grid {
@@ -275,44 +329,47 @@ header nav ul li a.active {
 }
 
 .product-card {
-    background-color: #FFFFFF;
-    color: #1E1E1E;
+    /* Ajustado para tema escuro. O original era fundo branco. */
+    background-color: #1E1E1E; /* Fundo do card escuro */
+    color: #E0E0E0; /* Texto claro */
     padding: 20px;
     border-radius: 8px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra mais sutil em fundo escuro */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 .product-card img {
     width: 100%;
-    height: 200px; /* Altura fixa para imagens */
-    object-fit: cover; /* Para cobrir a área sem distorcer */
+    height: 200px;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
+    background-color: #f0f0f0; /* Fundo para imagens com transparência */
 }
 
 .product-card h3 {
     font-size: 1.1em;
     font-weight: 700;
     margin-bottom: 5px;
+    color: #FFFFFF; /* Título do produto branco */
 }
 
 .product-card .category {
     font-size: 0.85em;
-    color: #555555;
+    color: #A0A0A0; /* Categoria mais sutil */
     margin-bottom: 10px;
 }
 
 .product-card .price {
     font-size: 1.2em;
     font-weight: 700;
-    color: #3B82F6; /* Azul no preço */
+    color: #3B82F6;
 }
 
 /* Promo Banner (Street Ankle) */
@@ -324,8 +381,7 @@ header nav ul li a.active {
     position: relative;
     color: #FFFFFF;
 }
-
-.promo-banner::before { /* Overlay escuro para melhor legibilidade */
+.promo-banner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -334,24 +390,19 @@ header nav ul li a.active {
     height: 100%;
     background-color: rgba(0,0,0,0.6);
 }
-
 .street-ankle {
-    /* Usar uma imagem de fundo real aqui */
-    background-image: url('https://i.imgur.com/MDBpl4e.jpg'); /* Imagem placeholder */
+    background-image: url('https://i.imgur.com/MDBpl4e.jpg');
 }
-
 .promo-banner .container {
-    position: relative; /* Para que o conteúdo fique acima do overlay */
+    position: relative;
     z-index: 1;
 }
-
-.promo-banner h2 {
+.promo-banner h2 { /* Se houver um h2 no banner, não estava no HTML original */
     font-size: 2.8em;
     font-weight: 900;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
-
 .promo-banner p {
     font-size: 1.1em;
     margin-bottom: 25px;
@@ -359,7 +410,6 @@ header nav ul li a.active {
     margin-left: auto;
     margin-right: auto;
 }
-
 .btn-light {
     background-color: #FFFFFF;
     color: #121212;
@@ -370,48 +420,43 @@ header nav ul li a.active {
     background-color: #E0E0E0;
 }
 
-/* Footer */
+/* Footer (Estilos originais do usuário) */
 footer {
-    background-color: #0A0A0A; /* Mais escuro para o rodapé */
+    background-color: #0A0A0A;
     color: #A0A0A0;
     padding: 40px 0 20px;
     font-size: 0.9em;
 }
-
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Para responsividade */
-    gap: 20px; /* Espaço entre colunas */
+    flex-wrap: wrap;
+    gap: 20px;
     margin-bottom: 30px;
 }
-
 .footer-column {
     flex: 1;
-    min-width: 200px; /* Largura mínima para cada coluna */
+    min-width: 200px;
 }
-
-.footer-column .logo {
+.footer-column .logo svg { /* Estilo para o logo no footer */
+    fill: white;
+    width: 150px; /* Ajustar */
+    height: auto;
     margin-bottom: 15px;
-    font-size: 1.5em;
 }
-
 .footer-column h4 {
     font-size: 1.1em;
     color: #FFFFFF;
     margin-bottom: 15px;
     font-weight: 500;
 }
-
 .footer-column ul li {
     margin-bottom: 8px;
 }
-
 .footer-column ul li a:hover {
     color: #FFFFFF;
     text-decoration: underline;
 }
-
 .social-icons a {
     display: inline-block;
     margin-right: 15px;
@@ -419,11 +464,9 @@ footer {
     color: #A0A0A0;
     transition: color 0.3s ease;
 }
-
 .social-icons a:hover {
-    color: #3B82F6; /* Azul no hover dos ícones sociais */
+    color: #3B82F6;
 }
-
 .copyright {
     text-align: center;
     padding-top: 20px;
@@ -431,7 +474,7 @@ footer {
     font-size: 0.85em;
 }
 
-/* Media Queries (Exemplo Básico) */
+/* Media Queries (Originais do usuário, podem precisar de ajustes com o novo layout) */
 @media (max-width: 992px) {
     header .container {
         flex-direction: column;
@@ -453,26 +496,38 @@ footer {
         margin-top: 10px;
     }
 
-    .hero .container {
+    .hero > .container { /* Ajuste para layout em coluna no mobile */
         flex-direction: column;
-        text-align: center;
+        text-align: center; /* Centraliza o hero-content */
     }
-    .hero-content, .hero-image-area {
-        max-width: 100%;
+    .hero-content {
+        align-items: center; /* Centraliza itens dentro do hero-content */
+        flex-basis: auto; /* Reseta o basis */
+        margin-bottom: 30px;
     }
     .hero-image-area {
-        margin-top: 30px;
+        min-height: auto; /* Ajusta altura mínima */
+        width: 100%; /* Ocupa toda a largura */
     }
     .main-shoe {
-        transform: rotate(0deg) scale(1); /* Reset no mobile */
+        max-height: 350px; /* Reduz um pouco no mobile */
     }
-    .shoe-variants {
-        position: static;
-        transform: translateX(0);
+    .next-arrow-hero { /* Ajuste para não sobrepor demais as variantes */
+        right: 5%;
+    }
+    .shoe-variants { /* Pode precisar ser reposicionado ou estilizado diferente no mobile */
+        position: static; /* Tira do absoluto */
+        flex-direction: row; /* Lado a lado */
+        justify-content: center;
         margin-top: 20px;
+        padding-right: 0;
+        transform: translateY(0);
     }
-    .hero h1 {
-        font-size: 3em;
+     .hero-main-text-overlay {
+        font-size: clamp(2.5rem, 12vw, 4rem); /* Menor no mobile */
+    }
+     .hero-subtitle-overlay {
+        font-size: clamp(1rem, 5vw, 1.3rem);
     }
 }
 
@@ -488,22 +543,39 @@ footer {
     .footer-column {
         margin-bottom: 20px;
     }
-    .social-icons {
+    .social-icons { /* No original não tinha, mas é bom ter */
         justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2.5em;
+    .hero-main-text-overlay {
+        font-size: 2.2rem; /* Ainda menor */
     }
-    .hero p {
-        font-size: 1em;
+    .hero-subtitle-overlay {
+        font-size: 0.9rem;
+    }
+    .hero-actions {
+        flex-direction: column; /* Botões um abaixo do outro */
+        width: 100%;
+        max-width: 280px; /* Limita largura dos botões */
+    }
+    .hero-actions .btn {
+        width: 100%;
     }
     .product-card {
         padding: 15px;
     }
-    .promo-banner h2 {
+    .promo-banner h2 { /* Se o h2 for usado no banner */
         font-size: 2em;
+    }
+    .variant-thumb {
+        width: 50px;
+        height: 50px;
+    }
+    .slider-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
     }
 }
