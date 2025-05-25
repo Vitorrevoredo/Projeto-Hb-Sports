@@ -6,14 +6,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* Fundo escuro geral */
+    background-color: #121212; 
     color: #E0E0E0;
     line-height: 1.6;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px; /* Pode ser aumentado para a seção hero se necessário */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -38,7 +38,7 @@ ul {
     font-size: 0.85rem;
 }
 
-/* Header */
+
 header {
     background-color: #1E1E1E;
     padding: 15px 0;
@@ -55,8 +55,8 @@ header .container {
 }
 
 .logo svg {
-    fill: white; /* Garante que o logo seja branco */
-    width: 150px; /* Ajuste o tamanho conforme necessário */
+    fill: white; 
+    width: 150px; 
     height: auto;
 }
 
@@ -75,7 +75,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover,
-header nav ul li a.current-page { /* Adicionada classe para página ativa */
+header nav ul li a.current-page { 
     color: #FFFFFF;
     font-weight: bold;
 }
@@ -105,35 +105,35 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     color: #3B44F6;
 }
 
-/* Hero Section */
+
 .hero {
     background-color: #000000;
     padding: 20px 0 40px;
     position: relative;
     overflow: hidden;
-    min-height: 70vh; /* Garante altura mínima */
+    min-height: 70vh;
 }
 
-.hero > .container { /* Container direto da seção hero */
+.hero > .container { 
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     position: relative;
     z-index: 2;
-    max-width: 1300px; /* Aumenta um pouco a largura máxima para a hero */
+    max-width: 1300px; 
 }
 
 .hero-content {
-    flex: 0 0 35%; /* Espaço para o conteúdo à esquerda */
+    flex: 0 0 35%; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 3; /* Acima da imagem principal */
+    z-index: 3; 
 }
 
 .promotion-tag {
-    background-color: #D90429; /* Vermelho como na referência */
+    background-color: #D90429; 
     color: #FFFFFF;
     padding: 8px 15px;
     font-size: 0.9em;
@@ -143,30 +143,12 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     text-transform: uppercase;
 }
 
-.hero-main-text-overlay { /* "Jumpman" vermelho */
-    font-size: clamp(3.5rem, 9vw, 6rem);
-    font-weight: 900;
-    color: #D90429;
-    text-transform: uppercase;
-    line-height: 0.9;
-    margin-bottom: 8px;
-}
-
-.hero-subtitle-overlay { /* "Basketball Shoes" */
-    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
-    font-weight: 300;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 30px;
-}
-
 .hero-actions {
     display: flex;
     gap: 15px;
 }
 
-.hero-actions .btn-primary { /* "ADD TO CART" */
+.hero-actions .btn-primary { 
     background-color: #FFFFFF;
     color: #121212;
     padding: 12px 22px;
@@ -175,32 +157,32 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     background-color: #E0E0E0;
 }
 
-.hero-actions .btn-secondary { /* "BUY NOW" */
-    background-color: #000000; /* Fundo preto */
+.hero-actions .btn-secondary { 
+    background-color: #000000; 
     color: #FFFFFF;
-    border: 1.5px solid #FFFFFF; /* Borda branca */
+    border: 1.5px solid #FFFFFF; 
     padding: 12px 22px;
 }
 .hero-actions .btn-secondary:hover {
-    background-color: #333333; /* Levemente mais claro no hover */
+    background-color: #333333; 
     border-color: #FFFFFF;
 }
 
 .hero-image-area {
-    flex: 1 1 60%; /* Espaço para a imagem e variantes */
+    flex: 1 1 60%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza a imagem se ela for menor */
-    min-height: 450px;
+    justify-content: flex-end; 
+    min-height: 550px;
 }
 
-.main-shoe { /* Sua imagem principal 'assets/background home 1.png' */
-    max-width: 100%;
-    max-height: 550px; /* Ajuste conforme o tamanho da sua imagem */
+.main-shoe { 
+    max-width: 600%;
+    max-height: 600px; 
     object-fit: contain;
     display: block;
-    z-index: 1; /* Atrás das setas e variantes */
+    z-index: 1; 
 }
 
 .slider-arrow {
@@ -215,7 +197,7 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     justify-content: center;
     cursor: pointer;
     position: absolute;
-    z-index: 5; /* Acima da imagem principal */
+    z-index: 5; 
     transition: background-color 0.3s ease;
     font-size: 1.2rem;
 }
@@ -224,34 +206,33 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
 }
 
 .prev-arrow-hero {
-    left: 5%; /* Posição da seta esquerda (ajuste conforme a imagem) */
+    left: 5%; 
     top: 50%;
     transform: translateY(-50%);
 }
 
 .next-arrow-hero {
-    /* Posição da seta direita (ajuste, deixando espaço para variantes se necessário) */
-    right: 20%; /* Aumentado para dar espaço para as variantes à direita da seta */
+    right: 20%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .shoe-variants {
     position: absolute;
-    right: 15px; /* Colado à direita da .hero-image-area */
+    right: 15px; 
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 4; /* Acima da imagem principal */
+    z-index: 4; 
 }
 
 .variant-thumb {
     width: 65px;
     height: 65px;
     object-fit: contain;
-    background-color: rgba(30, 30, 30, 0.7); /* Fundo para thumbnails */
+    background-color: rgba(30, 30, 30, 0.7); 
     border-radius: 8px;
     padding: 5px;
     cursor: pointer;
@@ -261,12 +242,12 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
 
 .variant-thumb:hover, .variant-thumb.active-variant {
     transform: scale(1.1);
-    border-color: #FFFFFF; /* Borda branca ao selecionar/hover */
+    border-color: #FFFFFF; 
 }
 
 .slider-dots {
     text-align: center;
-    margin-top: 20px; /* Espaço acima dos dots */
+    margin-top: 20px; 
     position: relative;
     z-index: 5;
 }
@@ -282,17 +263,15 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
 }
 
 .dot.active-dot {
-    background-color: #3B82F6; /* Azul como na referência */
+    background-color: #3B82F6; 
 }
 
 
-/* Product Sections (Estilos originais do usuário) */
 .top-items, .more-products {
     padding: 50px 0;
 }
-/* Cor de fundo das seções de produto precisa ser escura */
 .top-items, .promo-banner, .more-products {
-    background-color: #121212; /* Ou outra cor escura se preferir */
+    background-color: #121212; 
 }
 
 
@@ -306,12 +285,12 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
 .section-header h2 {
     font-size: 2em;
     font-weight: 700;
-    color: #FFFFFF; /* Texto branco para seções escuras */
+    color: #FFFFFF; 
 }
 
 .carousel-nav .nav-arrow {
-    background: #333333; /* Mais escuro */
-    color: #FFFFFF; /* Texto branco */
+    background: #333333; 
+    color: #FFFFFF; 
     border: none;
     padding: 8px 12px;
     margin-left: 10px;
@@ -329,13 +308,12 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
 }
 
 .product-card {
-    /* Ajustado para tema escuro. O original era fundo branco. */
-    background-color: #1E1E1E; /* Fundo do card escuro */
-    color: #E0E0E0; /* Texto claro */
+    background-color: #1E1E1E; 
+    color: #E0E0E0; 
     padding: 20px;
     border-radius: 8px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra mais sutil em fundo escuro */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -350,19 +328,19 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
-    background-color: #f0f0f0; /* Fundo para imagens com transparência */
+    background-color: #f0f0f0; 
 }
 
 .product-card h3 {
     font-size: 1.1em;
     font-weight: 700;
     margin-bottom: 5px;
-    color: #FFFFFF; /* Título do produto branco */
+    color: #FFFFFF; 
 }
 
 .product-card .category {
     font-size: 0.85em;
-    color: #A0A0A0; /* Categoria mais sutil */
+    color: #A0A0A0; 
     margin-bottom: 10px;
 }
 
@@ -372,7 +350,6 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     color: #3B82F6;
 }
 
-/* Promo Banner (Street Ankle) */
 .promo-banner {
     padding: 80px 0;
     text-align: center;
@@ -397,7 +374,7 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     position: relative;
     z-index: 1;
 }
-.promo-banner h2 { /* Se houver um h2 no banner, não estava no HTML original */
+.promo-banner h2 { 
     font-size: 2.8em;
     font-weight: 900;
     margin-bottom: 15px;
@@ -420,7 +397,6 @@ header nav ul li a.current-page { /* Adicionada classe para página ativa */
     background-color: #E0E0E0;
 }
 
-/* Footer (Estilos originais do usuário) */
 footer {
     background-color: #0A0A0A;
     color: #A0A0A0;
@@ -438,9 +414,9 @@ footer {
     flex: 1;
     min-width: 200px;
 }
-.footer-column .logo svg { /* Estilo para o logo no footer */
+.footer-column .logo svg { 
     fill: white;
-    width: 150px; /* Ajustar */
+    width: 150px; 
     height: auto;
     margin-bottom: 15px;
 }
@@ -472,110 +448,4 @@ footer {
     padding-top: 20px;
     border-top: 1px solid #222222;
     font-size: 0.85em;
-}
-
-/* Media Queries (Originais do usuário, podem precisar de ajustes com o novo layout) */
-@media (max-width: 992px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    header nav {
-        margin-top: 10px;
-        width: 100%;
-    }
-    header nav ul {
-       flex-direction: column;
-       width: 100%;
-    }
-    header nav ul li a {
-        display: block;
-        padding: 8px 0;
-    }
-    .auth-buttons {
-        margin-top: 10px;
-    }
-
-    .hero > .container { /* Ajuste para layout em coluna no mobile */
-        flex-direction: column;
-        text-align: center; /* Centraliza o hero-content */
-    }
-    .hero-content {
-        align-items: center; /* Centraliza itens dentro do hero-content */
-        flex-basis: auto; /* Reseta o basis */
-        margin-bottom: 30px;
-    }
-    .hero-image-area {
-        min-height: auto; /* Ajusta altura mínima */
-        width: 100%; /* Ocupa toda a largura */
-    }
-    .main-shoe {
-        max-height: 350px; /* Reduz um pouco no mobile */
-    }
-    .next-arrow-hero { /* Ajuste para não sobrepor demais as variantes */
-        right: 5%;
-    }
-    .shoe-variants { /* Pode precisar ser reposicionado ou estilizado diferente no mobile */
-        position: static; /* Tira do absoluto */
-        flex-direction: row; /* Lado a lado */
-        justify-content: center;
-        margin-top: 20px;
-        padding-right: 0;
-        transform: translateY(0);
-    }
-     .hero-main-text-overlay {
-        font-size: clamp(2.5rem, 12vw, 4rem); /* Menor no mobile */
-    }
-     .hero-subtitle-overlay {
-        font-size: clamp(1rem, 5vw, 1.3rem);
-    }
-}
-
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-column {
-        margin-bottom: 20px;
-    }
-    .social-icons { /* No original não tinha, mas é bom ter */
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-main-text-overlay {
-        font-size: 2.2rem; /* Ainda menor */
-    }
-    .hero-subtitle-overlay {
-        font-size: 0.9rem;
-    }
-    .hero-actions {
-        flex-direction: column; /* Botões um abaixo do outro */
-        width: 100%;
-        max-width: 280px; /* Limita largura dos botões */
-    }
-    .hero-actions .btn {
-        width: 100%;
-    }
-    .product-card {
-        padding: 15px;
-    }
-    .promo-banner h2 { /* Se o h2 for usado no banner */
-        font-size: 2em;
-    }
-    .variant-thumb {
-        width: 50px;
-        height: 50px;
-    }
-    .slider-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
 }
