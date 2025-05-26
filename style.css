@@ -6,14 +6,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212; 
+    background-color: #121212;
     color: #E0E0E0;
     line-height: 1.6;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -38,7 +38,6 @@ ul {
     font-size: 0.85rem;
 }
 
-
 header {
     background-color: #1E1E1E;
     padding: 15px 0;
@@ -55,8 +54,8 @@ header .container {
 }
 
 .logo svg {
-    fill: white; 
-    width: 150px; 
+    fill: white;
+    width: 150px;
     height: auto;
 }
 
@@ -75,7 +74,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover,
-header nav ul li a.current-page { 
+header nav ul li a.current-page {
     color: #FFFFFF;
     font-weight: bold;
 }
@@ -105,35 +104,40 @@ header nav ul li a.current-page {
     color: #3B44F6;
 }
 
-
 .hero {
-    background-color: #000000;
-    padding: 20px 0 40px;
+    background-image: url('assets/background home 1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    padding: 40px 0;
+    min-height: 70vh;
     position: relative;
     overflow: hidden;
-    min-height: 70vh;
 }
 
-.hero > .container { 
+.hero > .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     position: relative;
     z-index: 2;
-    max-width: 1300px; 
+    max-width: 1300px;
+    min-height: inherit;
 }
 
 .hero-content {
-    flex: 0 0 35%; 
+    flex: 0 0 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 3; 
+    position: relative;
+    z-index: 3;
 }
 
 .promotion-tag {
-    background-color: #D90429; 
+    background-color: #D90429;
     color: #FFFFFF;
     padding: 8px 15px;
     font-size: 0.9em;
@@ -148,7 +152,7 @@ header nav ul li a.current-page {
     gap: 15px;
 }
 
-.hero-actions .btn-primary { 
+.hero-actions .btn-primary {
     background-color: #FFFFFF;
     color: #121212;
     padding: 12px 22px;
@@ -157,32 +161,32 @@ header nav ul li a.current-page {
     background-color: #E0E0E0;
 }
 
-.hero-actions .btn-secondary { 
-    background-color: #000000; 
+.hero-actions .btn-secondary {
+    background-color: #000000;
     color: #FFFFFF;
-    border: 1.5px solid #FFFFFF; 
+    border: 1.5px solid #FFFFFF;
     padding: 12px 22px;
 }
 .hero-actions .btn-secondary:hover {
-    background-color: #333333; 
+    background-color: #333333;
     border-color: #FFFFFF;
 }
 
 .hero-image-area {
-    flex: 1 1 60%;
-    position: relative;
+    flex: 1 1 55%;
     display: flex;
     align-items: center;
-    justify-content: flex-end; 
-    min-height: 550px;
+    justify-content: center;
+    position: relative;
+    min-height: 300px;
 }
 
-.main-shoe { 
-    max-width: 600%;
-    max-height: 600px; 
-    object-fit: contain;
+.main-shoe {
+    max-width: 90%;
+    max-height: 60vh;
+    height: auto;
     display: block;
-    z-index: 1; 
+    object-fit: contain;
 }
 
 .slider-arrow {
@@ -197,7 +201,7 @@ header nav ul li a.current-page {
     justify-content: center;
     cursor: pointer;
     position: absolute;
-    z-index: 5; 
+    z-index: 5;
     transition: background-color 0.3s ease;
     font-size: 1.2rem;
 }
@@ -206,33 +210,33 @@ header nav ul li a.current-page {
 }
 
 .prev-arrow-hero {
-    left: 5%; 
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .next-arrow-hero {
-    right: 20%;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .shoe-variants {
     position: absolute;
-    right: 15px; 
+    right: 15px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(120%); /* Posiciona ao lado da área da imagem principal */
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 4; 
+    z-index: 4;
 }
 
 .variant-thumb {
     width: 65px;
     height: 65px;
     object-fit: contain;
-    background-color: rgba(30, 30, 30, 0.7); 
+    background-color: rgba(30, 30, 30, 0.7);
     border-radius: 8px;
     padding: 5px;
     cursor: pointer;
@@ -242,14 +246,16 @@ header nav ul li a.current-page {
 
 .variant-thumb:hover, .variant-thumb.active-variant {
     transform: scale(1.1);
-    border-color: #FFFFFF; 
+    border-color: #FFFFFF;
 }
 
 .slider-dots {
     text-align: center;
-    margin-top: 20px; 
+    margin-top: 20px;
     position: relative;
     z-index: 5;
+    width: 100%; /* Para centralizar os pontos abaixo do conteúdo do hero */
+    bottom: -20px; /* Ajuste para posicionar abaixo */
 }
 
 .dot {
@@ -263,17 +269,15 @@ header nav ul li a.current-page {
 }
 
 .dot.active-dot {
-    background-color: #3B82F6; 
+    background-color: #3B82F6;
 }
-
 
 .top-items, .more-products {
     padding: 50px 0;
 }
 .top-items, .promo-banner, .more-products {
-    background-color: #121212; 
+    background-color: #121212;
 }
-
 
 .section-header {
     display: flex;
@@ -285,12 +289,12 @@ header nav ul li a.current-page {
 .section-header h2 {
     font-size: 2em;
     font-weight: 700;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 .carousel-nav .nav-arrow {
-    background: #333333; 
-    color: #FFFFFF; 
+    background: #333333;
+    color: #FFFFFF;
     border: none;
     padding: 8px 12px;
     margin-left: 10px;
@@ -308,12 +312,12 @@ header nav ul li a.current-page {
 }
 
 .product-card {
-    background-color: #1E1E1E; 
-    color: #E0E0E0; 
+    background-color: #1E1E1E;
+    color: #E0E0E0;
     padding: 20px;
     border-radius: 8px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -328,19 +332,19 @@ header nav ul li a.current-page {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
 
 .product-card h3 {
     font-size: 1.1em;
     font-weight: 700;
     margin-bottom: 5px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 .product-card .category {
     font-size: 0.85em;
-    color: #A0A0A0; 
+    color: #A0A0A0;
     margin-bottom: 10px;
 }
 
@@ -368,13 +372,13 @@ header nav ul li a.current-page {
     background-color: rgba(0,0,0,0.6);
 }
 .street-ankle {
-    background-image: url('assets/card\ modelo\ teste.png');
+    background-image: url('assets/card modelo teste.png');
 }
 .promo-banner .container {
     position: relative;
     z-index: 1;
 }
-.promo-banner h2 { 
+.promo-banner h2 {
     font-size: 2.8em;
     font-weight: 900;
     margin-bottom: 15px;
@@ -414,9 +418,9 @@ footer {
     flex: 1;
     min-width: 200px;
 }
-.footer-column .logo svg { 
+.footer-column .logo svg {
     fill: white;
-    width: 150px; 
+    width: 150px;
     height: auto;
     margin-bottom: 15px;
 }
