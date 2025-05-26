@@ -1,6 +1,12 @@
+.auth-buttons{
+    display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
 .btn {
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #3B44F6; 
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -12,7 +18,6 @@
 .btn-login {
     background-color: #3B44F6;
     color: #FFFFFF;
-    margin-left: 10px;
 }
 .btn-login:hover {
     background-color: #2c35c4;
@@ -22,7 +27,6 @@
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
-    margin-left: 10px;
 }
 .btn-register:hover {
     background-color: #fff;
@@ -38,7 +42,7 @@
     background-color: #E0E0E0;
 }
 
-.btn-secondary { 
+.btn-secondary {
     background-color: #000000;
     color: #FFFFFF;
     border: 1.5px solid #FFFFFF;
@@ -49,7 +53,7 @@
     border-color: #FFFFFF;
 }
 
-.btn-light { 
+.btn-light {
     background-color: #FFFFFF;
     color: #121212;
     padding: 12px 30px;
@@ -62,21 +66,19 @@
 .btn-login-form {
     background-color: #3B44F6;
     color: #FFFFFF;
-    width: 100%;
-    padding: 12px;
-    font-size: 1em;
+    border: 1px solid #3B44F6; 
+    padding: 10px 20px;       
+    font-size: 0.85rem;      
+    font-weight: bold;      
     text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
+    border-radius: 5px;       
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .btn-login-form:hover {
     background-color: #2c35c4;
 }
 
-/* Botões Sociais (Página de Login) */
 .social-btn {
     background-color: #2a2a2a;
     color: #E0E0E0;
@@ -105,8 +107,6 @@
     color: #FFFFFF;
 }
 
-
-/* Tags de Promoção */
 .promotion-tag {
     background-color: #D90429;
     color: #FFFFFF;
@@ -129,7 +129,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: absolute; 
+    position: absolute;
     z-index: 5;
     transition: background-color 0.3s ease;
     font-size: 1.2rem;
@@ -154,7 +154,7 @@
     border-color: #FFFFFF;
 }
 
-.dot { 
+.dot {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -216,7 +216,6 @@
     color: #3B82F6;
 }
 
-/* Cabeçalho de Seção e Navegação de Carrossel */
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -243,7 +242,6 @@
     background: #444444;
 }
 
-/* Promo Banner Component */
 .promo-banner {
     padding: 80px 0;
     text-align: center;
@@ -251,7 +249,7 @@
     background-position: center;
     position: relative;
     color: #FFFFFF;
-    background-color: #121212; 
+    background-color: #121212;
 }
 .promo-banner::before {
     content: '';
@@ -262,10 +260,10 @@
     height: 100%;
     background-color: rgba(0,0,0,0.6);
 }
-.street-ankle { 
-    background-image: url('../assets/card\ modelo\ teste.png');
+.street-ankle {
+    background-image: url('../assets/card modelo teste.png');
 }
-.promo-banner .container { 
+.promo-banner .container {
     position: relative;
     z-index: 1;
 }
