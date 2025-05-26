@@ -34,7 +34,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover,
-header nav ul li a.current-page {
+header nav ul li {
     color: #FFFFFF;
     font-weight: bold;
 }
