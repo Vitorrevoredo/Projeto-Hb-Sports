@@ -1,12 +1,12 @@
-.auth-buttons{
+.botoes-autenticacao {
     display: flex;
-     align-items: center;
-     gap: 10px;
+    align-items: center;
+    gap: 10px;
 }
 
-.btn {
+.botao {
     padding: 10px 20px;
-    border: 1px solid #3B44F6; 
+    border: 1px solid #3B44F6;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -15,71 +15,71 @@
     font-size: 0.85rem;
 }
 
-.btn-login {
+.botao-entrar {
     background-color: #3B44F6;
     color: #FFFFFF;
 }
-.btn-login:hover {
+.botao-entrar:hover {
     background-color: #2c35c4;
 }
 
-.btn-register {
+.botao-registrar {
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
 }
-.btn-register:hover {
+.botao-registrar:hover {
     background-color: #fff;
     color: #3B44F6;
 }
 
-.btn-primary {
+.botao-primario {
     background-color: #FFFFFF;
     color: #121212;
     padding: 12px 22px;
 }
-.btn-primary:hover {
+.botao-primario:hover {
     background-color: #E0E0E0;
 }
 
-.btn-secondary {
+.botao-secundario {
     background-color: #000000;
     color: #FFFFFF;
     border: 1.5px solid #FFFFFF;
     padding: 12px 22px;
 }
-.btn-secondary:hover {
+.botao-secundario:hover {
     background-color: #333333;
     border-color: #FFFFFF;
 }
 
-.btn-light {
+.botao-claro {
     background-color: #FFFFFF;
     color: #121212;
     padding: 12px 30px;
     font-size: 1em;
 }
-.btn-light:hover {
+.botao-claro:hover {
     background-color: #E0E0E0;
 }
 
-.btn-login-form {
+.botao-formulario-entrar {
     background-color: #3B44F6;
     color: #FFFFFF;
-    border: 1px solid #3B44F6; 
-    padding: 10px 20px;       
-    font-size: 0.85rem;      
-    font-weight: bold;      
+    border: 1px solid #3B44F6;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
     text-transform: uppercase;
-    border-radius: 5px;       
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.btn-login-form:hover {
+.botao-formulario-entrar:hover {
     background-color: #2c35c4;
 }
 
-.social-btn {
+.botao-social {
     background-color: #2a2a2a;
     color: #E0E0E0;
     border: 1px solid #444;
@@ -93,21 +93,21 @@
     text-decoration: none;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-.social-btn:hover {
+.botao-social:hover {
     background-color: #333;
     border-color: #555;
 }
-.social-btn.google:hover {
+.botao-social.google:hover {
     color: #DB4437;
 }
-.social-btn.facebook:hover {
+.botao-social.facebook:hover {
     color: #4267B2;
 }
-.social-btn.apple:hover {
+.botao-social.apple:hover {
     color: #FFFFFF;
 }
 
-.promotion-tag {
+.etiqueta-promocao {
     background-color: #D90429;
     color: #FFFFFF;
     padding: 8px 15px;
@@ -118,7 +118,7 @@
     text-transform: uppercase;
 }
 
-.slider-arrow {
+.seta-slider {
     background-color: rgba(40, 40, 40, 0.5);
     color: #FFFFFF;
     border: none;
@@ -134,11 +134,11 @@
     transition: background-color 0.3s ease;
     font-size: 1.2rem;
 }
-.slider-arrow:hover {
+.seta-slider:hover {
     background-color: rgba(60, 60, 60, 0.8);
 }
 
-.variant-thumb {
+.miniatura-variante {
     width: 65px;
     height: 65px;
     object-fit: contain;
@@ -149,12 +149,12 @@
     border: 1px solid transparent;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.variant-thumb:hover, .variant-thumb.active-variant {
+.miniatura-variante:hover, .miniatura-variante.variante-ativa {
     transform: scale(1.1);
     border-color: #FFFFFF;
 }
 
-.dot {
+.ponto {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -163,17 +163,17 @@
     margin: 0 5px;
     cursor: pointer;
 }
-.dot.active-dot {
+.ponto.ponto-ativo {
     background-color: #3B82F6;
 }
 
-.product-grid {
+.grade-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
-.product-card {
+.cartao-produto {
     background-color: #1E1E1E;
     color: #E0E0E0;
     padding: 20px;
@@ -183,12 +183,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card:hover {
+.cartao-produto:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-.product-card img {
+.cartao-produto img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -197,39 +197,39 @@
     background-color: #f0f0f0;
 }
 
-.product-card h3 {
+.cartao-produto h3 {
     font-size: 1.1em;
     font-weight: 700;
     margin-bottom: 5px;
     color: #FFFFFF;
 }
 
-.product-card .category {
+.cartao-produto .categoria-produto {
     font-size: 0.85em;
     color: #A0A0A0;
     margin-bottom: 10px;
 }
 
-.product-card .price {
+.cartao-produto .preco-produto {
     font-size: 1.2em;
     font-weight: 700;
     color: #3B82F6;
 }
 
-.section-header {
+.cabecalho-secao {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.section-header h2 {
+.cabecalho-secao h2 {
     font-size: 2em;
     font-weight: 700;
     color: #FFFFFF;
 }
 
-.carousel-nav .nav-arrow {
+.navegacao-carrossel .seta-navegacao {
     background: #333333;
     color: #FFFFFF;
     border: none;
@@ -238,11 +238,11 @@
     border-radius: 24px;
     cursor: pointer;
 }
-.carousel-nav .nav-arrow:hover {
+.navegacao-carrossel .seta-navegacao:hover {
     background: #444444;
 }
 
-.promo-banner {
+.banner-promocional {
     padding: 80px 0;
     text-align: center;
     background-size: cover;
@@ -251,7 +251,7 @@
     color: #FFFFFF;
     background-color: #121212;
 }
-.promo-banner::before {
+.banner-promocional::before {
     content: '';
     position: absolute;
     top: 0;
@@ -260,20 +260,20 @@
     height: 100%;
     background-color: rgba(0,0,0,0.6);
 }
-.street-ankle {
+.banner-tornozelo-urbano {
     background-image: url('../assets/card modelo teste.png');
 }
-.promo-banner .container {
+.banner-promocional .conteiner {
     position: relative;
     z-index: 1;
 }
-.promo-banner h2 {
+.banner-promocional h2 {
     font-size: 2.8em;
     font-weight: 900;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
-.promo-banner p {
+.banner-promocional p {
     font-size: 1.1em;
     margin-bottom: 25px;
     max-width: 600px;
@@ -281,7 +281,7 @@
     margin-right: auto;
 }
 
-.top-items, .more-products {
+.principais-itens, .mais-produtos {
     padding: 50px 0;
     background-color: #121212;
 }
