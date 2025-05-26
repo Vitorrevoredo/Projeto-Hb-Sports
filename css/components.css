@@ -264,7 +264,7 @@
     background-color: rgba(0,0,0,0.6);
 }
 .street-ankle { 
-    background-image: url('assets/card modelo teste.png');
+    background-image: url('../assets/card\ modelo\ teste.png');
 }
 .promo-banner .container { 
     position: relative;
