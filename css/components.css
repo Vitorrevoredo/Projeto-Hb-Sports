@@ -1,0 +1,290 @@
+/* Botões Gerais */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.btn-login {
+    background-color: #3B44F6;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.btn-login:hover {
+    background-color: #2c35c4;
+}
+
+.btn-register {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-left: 10px;
+}
+.btn-register:hover {
+    background-color: #fff;
+    color: #3B44F6;
+}
+
+.btn-primary {
+    background-color: #FFFFFF;
+    color: #121212;
+    padding: 12px 22px;
+}
+.btn-primary:hover {
+    background-color: #E0E0E0;
+}
+
+.btn-secondary { 
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1.5px solid #FFFFFF;
+    padding: 12px 22px;
+}
+.btn-secondary:hover {
+    background-color: #333333;
+    border-color: #FFFFFF;
+}
+
+.btn-light { 
+    background-color: #FFFFFF;
+    color: #121212;
+    padding: 12px 30px;
+    font-size: 1em;
+}
+.btn-light:hover {
+    background-color: #E0E0E0;
+}
+
+.btn-login-form {
+    background-color: #3B44F6;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+.btn-login-form:hover {
+    background-color: #2c35c4;
+}
+
+/* Botões Sociais (Página de Login) */
+.social-btn {
+    background-color: #2a2a2a;
+    color: #E0E0E0;
+    border: 1px solid #444;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.social-btn:hover {
+    background-color: #333;
+    border-color: #555;
+}
+.social-btn.google:hover {
+    color: #DB4437;
+}
+.social-btn.facebook:hover {
+    color: #4267B2;
+}
+.social-btn.apple:hover {
+    color: #FFFFFF;
+}
+
+
+/* Tags de Promoção */
+.promotion-tag {
+    background-color: #D90429;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.slider-arrow {
+    background-color: rgba(40, 40, 40, 0.5);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute; 
+    z-index: 5;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+}
+.slider-arrow:hover {
+    background-color: rgba(60, 60, 60, 0.8);
+}
+
+.variant-thumb {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.variant-thumb:hover, .variant-thumb.active-variant {
+    transform: scale(1.1);
+    border-color: #FFFFFF;
+}
+
+.dot { 
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.dot.active-dot {
+    background-color: #3B82F6;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f0f0f0;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.product-card .category {
+    font-size: 0.85em;
+    color: #A0A0A0;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #3B82F6;
+}
+
+/* Cabeçalho de Seção e Navegação de Carrossel */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.carousel-nav .nav-arrow {
+    background: #333333;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+.carousel-nav .nav-arrow:hover {
+    background: #444444;
+}
+
+/* Promo Banner Component */
+.promo-banner {
+    padding: 80px 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #FFFFFF;
+    background-color: #121212; 
+}
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+.street-ankle { 
+    background-image: url('assets/card modelo teste.png');
+}
+.promo-banner .container { 
+    position: relative;
+    z-index: 1;
+}
+.promo-banner h2 {
+    font-size: 2.8em;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.promo-banner p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-items, .more-products {
+    padding: 50px 0;
+    background-color: #121212;
+}
