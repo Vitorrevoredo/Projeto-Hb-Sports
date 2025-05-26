@@ -29,8 +29,8 @@
                 </ul>
             </nav>
             <div class="auth-buttons">
-                <button class="btn btn-login">Login</button>
-                <button class="btn btn-register">Registre-se</button>
+                <a href="login.html" class="btn btn-login-active">Login</a> 
+                <a href="registre-se.html" class="btn btn-register-inactive">Registre-se</a>
             </div>
         </div>
     </header>
@@ -75,7 +75,7 @@
                             <i class="fab fa-apple"></i>
                         </button>
                     </div>
-                    <p class="signup-link-text">Não tem uma conta? <a href="#">Cadastre-se</a></p>
+                    <p class="signup-link-text">Não tem uma conta? <a href="registre-se.html">Cadastre-se</a></p>
                 </form>
             </div>
         </div>
@@ -126,19 +126,5 @@
         </div>
     </footer>
 
-    <script>
-        // Script simples para alternar a visibilidade da senha
-        const togglePassword = document.querySelector('.toggle-password');
-        const passwordInput = document.getElementById('password');
-
-        if (togglePassword && passwordInput) {
-            togglePassword.addEventListener('click', function () {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                this.querySelector('i').classList.toggle('fa-eye');
-                this.querySelector('i').classList.toggle('fa-eye-slash');
-            });
-        }
-    </script>
 </body>
 </html>
