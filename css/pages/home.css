@@ -61,13 +61,13 @@
 }
 
 .seta-anterior-destaque {
-    left: -400px;
-    top: 50%;
-    transform: translateY(-50%);
+left: -400px;
+top: 50%;
+transform: translateY(-50%);
 }
 
 .seta-proximo-destaque {
-    right: 15px;
+    right: 20px; 
     top: 50%;
     transform: translateY(-50%);
 }
