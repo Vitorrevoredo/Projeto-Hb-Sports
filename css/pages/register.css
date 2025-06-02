@@ -186,3 +186,78 @@ header .botoes-autenticacao .botao-entrar-secundario:hover {
     background-color: #fff;
     color: #1E1E1E;
 }
+
+@media screen and (max-width: 992px) {
+    .conteiner-layout-registrar {
+        flex-direction: column; 
+        max-width: 500px; 
+    }
+    .coluna-imagem-registrar {
+        min-height: 300px; 
+        padding: 20px;
+    }
+    .coluna-formulario-registrar {
+        padding: 30px;
+    }
+    .texto-logomarca-registrar {
+        font-size: 2.5em; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .principal-pagina-registrar {
+        padding: 10px 0; 
+    }
+    .conteiner-layout-registrar {
+        max-width: 90%; 
+    }
+    .coluna-imagem-registrar {
+        min-height: 200px; 
+    }
+    .coluna-formulario-registrar {
+        padding: 20px;
+    }
+    .coluna-formulario-registrar h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    .coluna-formulario-registrar .grupo-entrada {
+        margin-bottom: 15px;
+    }
+    .coluna-formulario-registrar input[type="text"],
+    .coluna-formulario-registrar input[type="email"],
+    .coluna-formulario-registrar input[type="password"] {
+        padding: 10px 10px 10px 0;
+        font-size: 0.9em;
+    }
+    .coluna-formulario-registrar .input-group .input-icon,
+    .coluna-formulario-registrar .input-group .icone-entrada-direita {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+    .botao-continuar {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .coluna-imagem-registrar {
+        display: none; 
+    }
+    .conteiner-layout-registrar {
+        max-width: 95%; 
+        border-radius: 0; 
+        box-shadow: none; 
+    }
+    .coluna-formulario-registrar {
+        padding: 15px;
+    }
+    .coluna-formulario-registrar h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .coluna-formulario-registrar .grupo-entrada {
+        margin-bottom: 10px;
+    }
+}

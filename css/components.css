@@ -285,3 +285,125 @@
     padding: 50px 0;
     background-color: #121212;
 }
+
+@media screen and (max-width: 768px) {
+    .botao {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    .botao-social {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .etiqueta-promocao {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .seta-slider {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .miniatura-variante {
+        width: 55px;
+        height: 55px;
+    }
+
+    .ponto {
+        width: 8px;
+        height: 8px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .cartao-produto {
+        padding: 15px;
+    }
+
+    .cartao-produto img {
+        height: 150px;
+    }
+
+    .cartao-produto h3 {
+        font-size: 1em;
+    }
+
+    .cartao-produto .categoria-produto,
+    .cartao-produto .preco-produto {
+        font-size: 0.8em;
+    }
+
+    .cabecalho-secao h2 {
+        font-size: 1.5em;
+    }
+
+    .navegacao-carrossel .seta-navegacao {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    .banner-promocional {
+        padding: 60px 0;
+    }
+
+    .banner-promocional h2 {
+        font-size: 2em;
+    }
+
+    .banner-promocional p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .botao {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .botao-social {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .etiqueta-promocao {
+        font-size: 0.7em;
+        padding: 5px 10px;
+    }
+
+    .seta-slider {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .miniatura-variante {
+        width: 45px;
+        height: 45px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-produto img {
+        height: 200px;
+    }
+
+    .banner-promocional h2 {
+        font-size: 1.8em;
+    }
+
+    .banner-promocional p {
+        font-size: 0.9em;
+    }
+}

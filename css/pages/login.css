@@ -190,3 +190,86 @@ header .botoes-autenticacao .botao-registrar-inativo:hover {
     background-color: #fff;
     color: #1E1E1E;
 }
+
+@media screen and (max-width: 768px) {
+    .principal-pagina-entrar {
+        padding: 20px 0;
+    }
+    .principal-pagina-entrar .titulo-pagina {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .cartao-formulario-entrar {
+        padding: 20px 30px;
+        max-width: 400px;
+    }
+    .texto-logomarca-entrar {
+        font-size: 2em;
+    }
+    .saudacao-formulario {
+        font-size: 1.1em;
+    }
+    .subtexto-formulario {
+        font-size: 0.85em;
+        margin-bottom: 20px;
+    }
+    .cartao-formulario-entrar .grupo-entrada {
+        margin-bottom: 15px;
+    }
+    .cartao-formulario-entrar input[type="email"],
+    .cartao-formulario-entrar input[type="password"] {
+        padding: 10px 15px 10px 0;
+        font-size: 0.95em;
+    }
+    .cartao-formulario-entrar .input-group .input-icon,
+    .cartao-formulario-entrar .input-group .icone-entrada-direita {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+    .cartao-formulario-entrar .forgot-password-link {
+        font-size: 0.8em;
+    }
+    .social-login-buttons {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .principal-pagina-entrar {
+        padding: 10px 0;
+    }
+    .principal-pagina-entrar .titulo-pagina {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    .cartao-formulario-entrar {
+        padding: 15px 20px;
+        max-width: 300px;
+    }
+    .texto-logomarca-entrar {
+        font-size: 1.8em;
+    }
+    .saudacao-formulario {
+        font-size: 1em;
+    }
+    .subtexto-formulario {
+        font-size: 0.8em;
+        margin-bottom: 15px;
+    }
+    .cartao-formulario-entrar .grupo-entrada {
+        margin-bottom: 10px;
+    }
+    .cartao-formulario-entrar input[type="email"],
+    .cartao-formulario-entrar input[type="password"] {
+        padding: 8px 10px 8px 0;
+        font-size: 0.9em;
+    }
+    .cartao-formulario-entrar .input-group .input-icon,
+    .cartao-formulario-entrar .input-group .icone-entrada-direita {
+        font-size: 0.8em;
+        padding: 0 8px;
+    }
+    .social-login-buttons {
+        gap: 10px;
+    }
+}

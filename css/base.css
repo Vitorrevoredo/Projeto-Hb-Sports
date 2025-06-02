@@ -26,3 +26,21 @@ a {
 ul {
     list-style: none;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.95em;
+    }
+    .conteiner {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 0.9em;
+    }
+    .conteiner {
+        padding: 0 5px;
+    }
+}
