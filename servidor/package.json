@@ -1,0 +1,15 @@
+{
+  "name": "servidor-hb-sports",
+  "version": "1.0.0",
+  "description": "Backend para o e-commerce HB Sports",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "seed": "node database/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
