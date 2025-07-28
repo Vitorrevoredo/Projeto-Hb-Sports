@@ -1,0 +1,15 @@
+{
+  "name": "hb_sports_projeto",
+  "version": "1.0.0",
+  "description": "Projeto HB Sports com backend Node.js",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
