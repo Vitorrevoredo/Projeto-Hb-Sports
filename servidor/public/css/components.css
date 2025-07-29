@@ -459,4 +459,32 @@
         color: #aaa;
         cursor: not-allowed;
     }
+    /* Estilos para botões de usuário logado */
+.botao-perfil {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.botao-perfil:hover {
+    background-color: #fff;
+    color: #121212;
+}
+
+.botao-sair {
+    padding: 10px 20px;
+    background-color: #e53935; /* Vermelho para ação de "sair" */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.botao-sair:hover {
+    background-color: #c62828;
+}
 }
