@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-/* COMO DEVE FICAR */
+
 .titulo-carrinho {
     display: flex;
     justify-content: space-between;
@@ -66,7 +66,7 @@
 .total-resumo { font-size: 1.2em; font-weight: bold; border-top: 1px solid #2a2a2a; padding-top: 15px; margin-top: 15px; }
 .botao-finalizar-compra { width: 100%; padding: 15px; font-size: 1.1em; }
 
-/* ESTILO PARA O NOVO BOTÃO */
+
 .botao-continuar-comprando {
     background-color: transparent;
     color: #a0a0a0;

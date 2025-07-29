@@ -239,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
         verificarEstadoLogin();
     };
 
-    // EVENTOS GLOBAIS
     document.body.addEventListener('click', (event) => {
         const botao = event.target.closest('.botao-adicionar-carrinho');
         if (botao) {
@@ -251,6 +250,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('aplicar-filtros')?.addEventListener('click', aplicarFiltrosEOrdenar);
     document.getElementById('seletor-ordenacao')?.addEventListener('change', aplicarFiltrosEOrdenar);
 
-    // INICIALIZAÇÃO
     carregarPagina();
 });

@@ -453,13 +453,12 @@
         background-color: #2c35c4;
     }
 
-    /* Estilo para quando o botão for clicado/desativado */
     .botao-adicionar-carrinho:disabled {
         background-color: #555;
         color: #aaa;
         cursor: not-allowed;
     }
-    /* Estilos para botões de usuário logado */
+   
 .botao-perfil {
     padding: 10px 20px;
     background-color: transparent;
@@ -476,7 +475,7 @@
 
 .botao-sair {
     padding: 10px 20px;
-    background-color: #e53935; /* Vermelho para ação de "sair" */
+    background-color: #e53935; 
     color: #fff;
     border: none;
     border-radius: 5px;
