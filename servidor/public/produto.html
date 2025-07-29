@@ -15,33 +15,57 @@
 
 <body>
     <header>
+        <div class="conteiner">
+            <div class="logomarca"><a href="index.html">
+                </a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calcados.html">Calçados</a></li>
+                    <li><a href="masculino.html">Masculino</a></li>
+                    <li><a href="feminino.html">Feminino</a></li>
+                    <li><a href="colecao.html">Coleção</a></li>
+                </ul>
+            </nav>
+            <div class="botoes-autenticacao">
+                <a href="carrinho.html" class="botao-carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="contagem-carrinho" data-count="0">0</span>
+                </a>
+                <a href="login.html" class="botao botao-entrar">Login</a>
+                <a href="registre-se.html" class="botao botao-registrar">Registre-se</a>
+            </div>
+        </div>
     </header>
 
     <main class="principal-pagina-produto">
-        <div class="conteiner-produto">
-            <div class="info-produto">
-                <h1 id="nome-produto">Carregando...</h1>
-                <p class="preco-produto" id="preco-produto">R$ 0,00</p>
-                <div class="acoes-produto">
-                    <button class="botao botao-primario">ADICIONAR AO CARRINHO</button>
-                    <button class="botao botao-secundario">COMPRAR AGORA</button>
-                </div>
-            </div>
+        <div class="conteiner-voltar">
+            <a href="javascript:history.back()" class="botao-voltar">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
 
+        <div class="conteiner-produto">
             <div class="galeria-produto">
                 <div class="imagem-principal-container">
-                    <button class="seta-galeria anterior"><i class="fas fa-chevron-left"></i></button>
-                    <img src="assets/placeholder.png" alt="Imagem principal do produto" id="imagem-principal">
-                    <button class="seta-galeria proximo"><i class="fas fa-chevron-right"></i></button>
+                    <img src="assets/placeholder.svg" alt="Imagem principal do produto" id="imagem-principal">
                 </div>
                 <div class="container-miniaturas" id="miniaturas">
                 </div>
             </div>
 
-            <div class="pontos-galeria" id="pontos-galeria">
+            <div class="info-produto">
+                <h1 id="nome-produto">Carregando...</h1>
+                <p class="preco-produto" id="preco-produto">R$ 0,00</p>
+                <div class="acoes-produto">
+                    <button class="botao botao-primario botao-adicionar-carrinho" id="btn-adicionar-carrinho">ADICIONAR
+                        AO CARRINHO</button>
+                    <button class="botao botao-secundario">COMPRAR AGORA</button>
+                </div>
             </div>
         </div>
     </main>
+
     <footer>
     </footer>
 

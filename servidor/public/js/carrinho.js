@@ -1,37 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
+    function getCart() {
+        return JSON.parse(localStorage.getItem('shoppingCart')) || [];
+    }
 
-    const contagemCarrinhoElemento = document.querySelector('.contagem-carrinho');
-    let itensNoCarrinho = 0; 
+    function saveCart(cart) {
+        localStorage.setItem('shoppingCart', JSON.stringify(cart));
+        updateCartCounter();
+    }
 
-    document.body.addEventListener('click', (event) => {
-        
+    function updateCartCounter() {
+        const cart = getCart();
+        const cartCounters = document.querySelectorAll('.contagem-carrinho');
+        if (cartCounters.length > 0) {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantidade, 0);
+            cartCounters.forEach(counter => {
+                counter.textContent = totalItems;
+                counter.dataset.count = totalItems;
+            });
+        }
+    }
 
-        if (event.target.classList.contains('botao-adicionar-carrinho')) {
-            const botao = event.target;
+    document.body.addEventListener('click', async (event) => {
+        const botaoAdicionar = event.target.closest('.botao-adicionar-carrinho');
+        if (botaoAdicionar) {
+            event.preventDefault(); // Previne qualquer comportamento padrão do link/botão
+            const produtoId = botaoAdicionar.dataset.produtoId;
 
-            if (botao.disabled) {
-                return;
+            if (botaoAdicionar.disabled) return;
+            botaoAdicionar.disabled = true;
+            botaoAdicionar.textContent = 'Adicionando...';
+
+            try {
+                const response = await fetch(`/api/produtos/item/${produtoId}`);
+                if (!response.ok) throw new Error('Produto não encontrado');
+                const produto = await response.json();
+                
+                const cart = getCart();
+                const itemExistente = cart.find(item => item.id === produto.id);
+
+                if (itemExistente) {
+                    itemExistente.quantidade++;
+                } else {
+                    cart.push({ ...produto, quantidade: 1 });
+                }
+
+                saveCart(cart);
+                botaoAdicionar.textContent = 'Adicionado!';
+
+            } catch (error) {
+                console.error('Erro ao adicionar produto:', error);
+                botaoAdicionar.textContent = 'Erro!';
+                setTimeout(() => {
+                    botaoAdicionar.disabled = false;
+                    botaoAdicionar.textContent = 'Adicionar ao Carrinho';
+                }, 2000);
             }
-
-            itensNoCarrinho++;
-            atualizarContagemCarrinho();
-
-            botao.disabled = true;
-            botao.textContent = 'Adicionado!';
-
-            animarIconeCarrinho();
         }
     });
 
-    function atualizarContagemCarrinho() {
-        contagemCarrinhoElemento.textContent = itensNoCarrinho;
-        contagemCarrinhoElemento.dataset.count = itensNoCarrinho;
-    }
-
-    function animarIconeCarrinho() {
-        contagemCarrinhoElemento.style.transform = 'scale(1.25)';
-        setTimeout(() => {
-            contagemCarrinhoElemento.style.transform = 'scale(1)';
-        }, 200);
-    }
+    updateCartCounter();
 });

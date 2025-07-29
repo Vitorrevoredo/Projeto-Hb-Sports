@@ -19,6 +19,7 @@
     background-color: #3B44F6;
     color: #FFFFFF;
 }
+
 .botao-entrar:hover {
     background-color: #2c35c4;
 }
@@ -28,6 +29,7 @@
     color: #fff;
     border: 1px solid #fff;
 }
+
 .botao-registrar:hover {
     background-color: #fff;
     color: #3B44F6;
@@ -38,6 +40,7 @@
     color: #121212;
     padding: 12px 22px;
 }
+
 .botao-primario:hover {
     background-color: #E0E0E0;
 }
@@ -48,6 +51,7 @@
     border: 1.5px solid #FFFFFF;
     padding: 12px 22px;
 }
+
 .botao-secundario:hover {
     background-color: #333333;
     border-color: #FFFFFF;
@@ -59,6 +63,7 @@
     padding: 12px 30px;
     font-size: 1em;
 }
+
 .botao-claro:hover {
     background-color: #E0E0E0;
 }
@@ -75,6 +80,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .botao-formulario-entrar:hover {
     background-color: #2c35c4;
 }
@@ -93,16 +99,20 @@
     text-decoration: none;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
 .botao-social:hover {
     background-color: #333;
     border-color: #555;
 }
+
 .botao-social.google:hover {
     color: #DB4437;
 }
+
 .botao-social.facebook:hover {
     color: #4267B2;
 }
+
 .botao-social.apple:hover {
     color: #FFFFFF;
 }
@@ -134,6 +144,7 @@
     transition: background-color 0.3s ease;
     font-size: 1.2rem;
 }
+
 .seta-slider:hover {
     background-color: rgba(60, 60, 60, 0.8);
 }
@@ -149,7 +160,9 @@
     border: 1px solid transparent;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.miniatura-variante:hover, .miniatura-variante.variante-ativa {
+
+.miniatura-variante:hover,
+.miniatura-variante.variante-ativa {
     transform: scale(1.1);
     border-color: #FFFFFF;
 }
@@ -163,6 +176,7 @@
     margin: 0 5px;
     cursor: pointer;
 }
+
 .ponto.ponto-ativo {
     background-color: #3B82F6;
 }
@@ -179,13 +193,13 @@
     padding: 20px;
     border-radius: 8px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cartao-produto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .cartao-produto img {
@@ -238,6 +252,7 @@
     border-radius: 24px;
     cursor: pointer;
 }
+
 .navegacao-carrossel .seta-navegacao:hover {
     background: #444444;
 }
@@ -251,6 +266,7 @@
     color: #FFFFFF;
     background-color: #121212;
 }
+
 .banner-promocional::before {
     content: '';
     position: absolute;
@@ -258,21 +274,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
+
 .banner-tornozelo-urbano {
     background-image: url('../assets/card modelo teste.png');
 }
+
 .banner-promocional .conteiner {
     position: relative;
     z-index: 1;
 }
+
 .banner-promocional h2 {
     font-size: 2.8em;
     font-weight: 900;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
+
 .banner-promocional p {
     font-size: 1.1em;
     margin-bottom: 25px;
@@ -281,7 +301,8 @@
     margin-right: auto;
 }
 
-.principais-itens, .mais-produtos {
+.principais-itens,
+.mais-produtos {
     padding: 50px 0;
     background-color: #121212;
 }
@@ -406,9 +427,36 @@
     .banner-promocional p {
         font-size: 0.9em;
     }
+
     .cartao-produto-link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-}
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+    }
+
+    .botao-adicionar-carrinho {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        background-color: #3B44F6;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .botao-adicionar-carrinho:hover {
+        background-color: #2c35c4;
+    }
+
+    /* Estilo para quando o botão for clicado/desativado */
+    .botao-adicionar-carrinho:disabled {
+        background-color: #555;
+        color: #aaa;
+        cursor: not-allowed;
+    }
 }

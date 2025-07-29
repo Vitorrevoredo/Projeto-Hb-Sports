@@ -1,0 +1,91 @@
+.principal-pagina-carrinho {
+    padding: 60px 0;
+}
+.conteiner-carrinho {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* COMO DEVE FICAR */
+.titulo-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 20px;
+}
+
+.titulo-carrinho h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0; 
+}
+.conteudo-carrinho {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+.item-carrinho {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2a2a2a;
+}
+.item-carrinho img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+}
+.detalhes-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.detalhes-item h3 { font-size: 1.2em; margin-bottom: 10px; }
+.detalhes-item p { color: #a0a0a0; }
+.controle-quantidade { display: flex; align-items: center; gap: 10px; margin-top: auto; }
+.controle-quantidade button { background: #2a2a2a; border: none; color: #fff; width: 30px; height: 30px; cursor: pointer; border-radius: 4px; }
+.controle-quantidade span { font-size: 1.1em; }
+.preco-item { font-size: 1.2em; font-weight: bold; margin-left: auto; }
+.botao-remover { background: none; border: none; color: #e53935; cursor: pointer; margin-left: 20px; font-size: 1.2em; }
+
+.resumo-carrinho {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+.resumo-carrinho h2 { font-size: 1.5em; margin-bottom: 20px; }
+.detalhe-resumo, .total-resumo { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.total-resumo { font-size: 1.2em; font-weight: bold; border-top: 1px solid #2a2a2a; padding-top: 15px; margin-top: 15px; }
+.botao-finalizar-compra { width: 100%; padding: 15px; font-size: 1.1em; }
+
+/* ESTILO PARA O NOVO BOTÃO */
+.botao-continuar-comprando {
+    background-color: transparent;
+    color: #a0a0a0;
+    border: 1px solid #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.botao-continuar-comprando:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #555;
+}
+
+@media (max-width: 992px) {
+    .conteudo-carrinho {
+        grid-template-columns: 1fr;
+    }
+}
