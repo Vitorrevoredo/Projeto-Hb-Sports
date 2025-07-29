@@ -18,8 +18,7 @@
             .then(response => response.json())
             .then(produtos => {
                 const grade = document.querySelector(".principais-itens .grade-produtos");
-                grade.innerHTML = ""; // Limpa os produtos fixos do HTML
-
+                grade.innerHTML = "";
                 produtos.forEach(produto => {
                     const card = document.createElement("div");
                     card.classList.add("cartao-produto");
@@ -80,8 +79,9 @@
                         <p id="destaque-preco"></p>
                     </div>
                     <div class="acoes-destaque">
-                        <button class="botao botao-primario">Adicionar ao Carrinho</button>
-                        <button class="botao botao-secundario">Comprar agora</button>
+                        <button class="botao botao-primario botao-adicionar-carrinho"
+                            id="destaque-btn-add-carrinho">Adicionar ao Carrinho</button>
+                        <button class="botao botao-secundario" id="destaque-btn-comprar-agora">Comprar agora</button>
                     </div>
                 </div>
                 <div class="area-imagem-destaque">
@@ -105,11 +105,11 @@
             </div>
         </section>
 
-      <section class="secao-acao-central banner-tornozelo-urbano">
-    <div class="conteiner">
-        <button class="botao botao-claro-outline">COMPRE AGORA</button>
-    </div>
-</section>
+        <section class="secao-acao-central banner-tornozelo-urbano">
+            <div class="conteiner">
+                <button class="botao botao-claro-outline">COMPRE AGORA</button>
+            </div>
+        </section>
 
         <section class="mais-produtos">
             <div class="conteiner">

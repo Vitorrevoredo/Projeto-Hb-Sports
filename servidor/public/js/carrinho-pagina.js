@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnFinalizar = document.querySelector('.botao-finalizar-compra');
 
     function getCart() {
-        return JSON.parse(localStorage.getItem('shoppingCart')) || [];
+        return JSON.parse(localStorage.getItem('carrinho')) || [];
     }
 
     function saveCart(cart) {
-        localStorage.setItem('shoppingCart', JSON.stringify(cart));
-        renderizarCarrinho(); // Re-renderiza tudo para refletir as mudanças
-        updateGlobalCartCounter(); 
+        localStorage.setItem('carrinho', JSON.stringify(cart));
+        renderizarCarrinho();
+        updateGlobalCartCounter();
     }
 
     function updateGlobalCartCounter() {
@@ -23,15 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
             counter.dataset.count = totalItems;
         });
     }
-    
+
     function renderizarCarrinho() {
         const cart = getCart();
         listaCarrinhoEl.innerHTML = '';
 
         if (cart.length === 0) {
-            listaCarrinhoEl.innerHTML = '<h2>Seu carrinho está vazio.</h2><p>Adicione produtos de nossas coleções para vê-los aqui!</p>';
+            listaCarrinhoEl.innerHTML = `
+                <h2>Seu carrinho está vazio.</h2>
+                <p>Adicione produtos de nossas coleções para vê-los aqui!</p>
+            `;
             atualizarResumo(0);
-            btnFinalizar.disabled = true; // Desativa o botão se o carrinho estiver vazio
+            btnFinalizar.disabled = true;
             return;
         }
 
@@ -41,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.forEach(item => {
             const itemTotal = item.preco * item.quantidade;
             subtotal += itemTotal;
-            
+
             const itemEl = document.createElement('div');
             itemEl.className = 'item-carrinho';
             itemEl.innerHTML = `
@@ -56,14 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <span class="preco-item">R$ ${itemTotal.toFixed(2).replace('.', ',')}</span>
-                <button class="botao-remover" data-id="${item.id}" title="Remover item"><i class="fas fa-trash-alt"></i></button>
+                <button class="botao-remover" data-id="${item.id}" title="Remover item">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
             `;
             listaCarrinhoEl.appendChild(itemEl);
         });
-        
+
         atualizarResumo(subtotal);
     }
-    
+
     function atualizarResumo(subtotal) {
         subtotalEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
         totalEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
@@ -91,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemIndex = cart.findIndex(i => i.id === id);
             cart.splice(itemIndex, 1);
         }
-        
+
         saveCart(cart);
     });
 
@@ -99,8 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cart = getCart();
         if (cart.length > 0) {
             alert('Compra finalizada com sucesso! (Esta é uma simulação)');
-            // Limpa o carrinho
-            saveCart([]);
+            saveCart([]); 
         }
     });
 
