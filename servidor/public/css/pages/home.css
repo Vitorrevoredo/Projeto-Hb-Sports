@@ -1,280 +1,173 @@
 .destaque-principal {
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
+    background-color: #000;
+    padding: 40px 0;
+    min-height: 85vh;
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    min-height: 60vh;
 }
 
-.conteudo-destaque-simples {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 500px;
+.destaque-principal > .conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
 }
 
-.conteudo-destaque-simples h1 {
-    font-size: 3em;
-    font-weight: 900;
+.conteudo-destaque {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.etiqueta-promocao {
+    background-color: #e53935;
+    color: #fff;
+    padding: 6px 14px;
+    font-weight: bold;
+    border-radius: 4px;
     margin-bottom: 10px;
-    color: #FFFFFF;
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-.conteudo-destaque-simples p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #E0E0E0;
+.conteudo-destaque h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5em;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
 }
 
-/* ============================================= */
-/* 2. SLIDER DE PRODUTOS EM DESTAQUE */
-/* ============================================= */
-
-.principais-itens {
-    padding: 60px 0;
-    background-color: #1a1a1a;
-}
-
-.conteiner-slider {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.principais-itens .cabecalho-secao h2 {
-    font-size: 1.8em;
-    color: #FFFFFF;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.conteudo-slider-produtos {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.info-produto-destaque {
-    flex: 1;
-    color: #FFFFFF;
-}
-
-.info-produto-destaque h3 {
-    font-size: 2.2em;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.info-produto-destaque p {
-    font-size: 1.1em;
+.conteudo-destaque p {
+    font-size: 1.5em;
     color: #a0a0a0;
-    margin-bottom: 15px;
 }
 
-.info-produto-destaque .preco-produto {
-    font-size: 1.8em;
-    font-weight: 500;
-    color: #FFFFFF;
-    margin-bottom: 25px;
+.acoes-destaque {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 .area-imagem-destaque {
     flex: 1;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .calcado-principal {
     max-width: 100%;
-    max-height: 400px;
     object-fit: contain;
+    transform: rotate(-20deg) scale(1.15);
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
 }
 
 .seta-slider {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(42, 42, 42, 0.8);
-    border: 1px solid #444;
-    color: #FFFFFF;
-    width: 45px;
-    height: 45px;
+    background: none;
+    border: 1px solid #555;
+    color: #fff;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 10;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
-
 .seta-slider:hover {
-    background-color: #3B44F6;
+    background-color: #fff;
+    color: #000;
 }
-
-.seta-anterior-destaque {
-    left: 10px;
-}
-
-.seta-proximo-destaque {
-    right: 10px;
-}
-
-.navegacao-inferior-slider {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-}
+.seta-anterior-destaque { left: -20px; }
+.seta-proximo-destaque { right: 80px; }
 
 .variantes-calcado {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
 .miniatura-variante {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: #111;
     border-radius: 8px;
     cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+    border: 2px solid #333;
+    transition: all 0.3s;
 }
-
 .miniatura-variante.miniatura-ativa {
-    border-color: #3B44F6;
+    border-color: #fff;
     transform: scale(1.1);
 }
 
 .pontos-slider {
-    display: flex;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
 }
 
-.ponto-destaque {
-    width: 12px;
-    height: 12px;
+.ponto {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background-color: #444;
+    background-color: #555;
     margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+}
+.ponto.ponto-ativo {
+    background-color: #fff;
 }
 
-.ponto-destaque.ponto-ativo {
-    background-color: #3B44F6;
-}
-
-/* ============================================= */
-/* 3. BANNER DE AÇÃO CENTRAL */
-/* ============================================= */
-
-.banner-promocional {
-    background-size: cover;
-    background-position: center;
-    padding: 80px 0;
-}
-
-.banner-tornozelo-urbano {
-    background-image: url('../assets/background home 1.png'); /* Você pode trocar esta imagem */
-}
-
-/* ============================================= */
-/* 4. SEÇÃO MAIS PRODUTOS */
-/* ============================================= */
-
-.mais-produtos {
+/* SEÇÕES DE PRODUTOS */
+.principais-itens, .mais-produtos, .secao-acao-central {
     padding: 60px 0;
 }
 
-.mais-produtos h2 {
+.cabecalho-secao h2 {
     font-size: 1.8em;
     color: #FFFFFF;
     font-weight: 700;
     margin-bottom: 30px;
 }
 
-/* ============================================= */
-/* MEDIA QUERIES (RESPONSIVIDADE) */
-/* ============================================= */
-
-@media screen and (max-width: 992px) {
-    .conteudo-slider-produtos {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .info-produto-destaque {
-        order: 2; /* Coloca o texto depois da imagem */
-    }
-
-    .area-imagem-destaque {
-        order: 1; /* Coloca a imagem antes do texto */
-        width: 100%;
-    }
-
-    .navegacao-inferior-slider {
-        flex-direction: column;
-        gap: 20px;
-    }
+.secao-acao-central {
+    padding: 80px 0; /* Aumenta a altura do banner */
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-@media screen and (max-width: 768px) {
-    .conteudo-destaque-simples h1 {
-        font-size: 2.2em;
-    }
-
-    .info-produto-destaque h3 {
-        font-size: 1.8em;
-    }
-
-    .info-produto-destaque .preco-produto {
-        font-size: 1.5em;
-    }
-
-    .miniatura-variante {
-        width: 60px;
-        height: 60px;
-    }
+/* Aplica a imagem de fundo correta */
+.banner-tornozelo-urbano {
+    background-image: url('../../assets/card\ modelo\ teste.png');
 }
 
-@media screen and (max-width: 480px) {
-    .destaque-principal {
-        min-height: 50vh;
-        padding: 60px 0;
-    }
+/* Adiciona uma camada escura para o botão ter mais destaque */
+.secao-acao-central::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
-    .conteudo-destaque-simples h1 {
-        font-size: 1.8em;
-    }
-
-    .conteudo-destaque-simples p {
-        font-size: 1em;
-    }
-    
-    .info-produto-destaque h3 {
-        font-size: 1.5em;
-    }
-
-    .info-produto-destaque .preco-produto {
-        font-size: 1.3em;
-    }
-
-    .variantes-calcado {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .miniatura-variante {
-        width: 50px;
-        height: 50px;
-    }
-
-    .seta-slider {
-        width: 35px;
-        height: 35px;
-    }
-
-    .seta-anterior-destaque { left: 5px; }
-    .seta-proximo-destaque { right: 5px; }
+.secao-acao-central .conteiner {
+    position: relative; /* Garante que o botão fique acima da camada escura */
+    z-index: 2;
 }

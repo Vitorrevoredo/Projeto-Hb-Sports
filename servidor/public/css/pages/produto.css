@@ -1,0 +1,86 @@
+.destaque-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.area-imagem-destaque {
+    position: relative;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calcado-principal {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.variantes-calcado {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.miniatura-variante {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.miniatura-variante:hover,
+.miniatura-variante.ativa {
+    border-color: #000;
+}
+
+.seta-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.seta-anterior-destaque {
+    left: 0;
+}
+
+.seta-proximo-destaque {
+    right: 0;
+}
+
+.conteudo-destaque {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.etiqueta-promocao {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: red;
+}
+
+.acoes-destaque {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}

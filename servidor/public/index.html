@@ -13,32 +13,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-   fetch("/api/produtos/colecao")
-        .then(response => response.json())
-        .then(produtos => {
-            const grade = document.querySelector(".principais-itens .grade-produtos");
-            grade.innerHTML = ""; // Limpa os produtos fixos do HTML
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("/api/produtos/colecao")
+            .then(response => response.json())
+            .then(produtos => {
+                const grade = document.querySelector(".principais-itens .grade-produtos");
+                grade.innerHTML = ""; // Limpa os produtos fixos do HTML
 
-            produtos.forEach(produto => {
-                const card = document.createElement("div");
-                card.classList.add("cartao-produto");
+                produtos.forEach(produto => {
+                    const card = document.createElement("div");
+                    card.classList.add("cartao-produto");
 
-                card.innerHTML = `
+                    card.innerHTML = `
                     <img src="${produto.imagem}" alt="${produto.nome}">
                     <h3>${produto.nome}</h3>
                     <p class="categoria-produto">${produto.categoria}</p>
                     <p class="preco-produto">R$ ${produto.preco.toFixed(2)}</p>
                 `;
 
-                grade.appendChild(card);
+                    grade.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error("Erro ao carregar produtos:", error);
             });
-        })
-        .catch(error => {
-            console.error("Erro ao carregar produtos:", error);
-        });
-});
+    });
 </script>
+
 <body>
     <header>
         <div class="conteiner">
@@ -74,18 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="conteiner">
                 <div class="conteudo-destaque">
                     <div>
-                        <span class="etiqueta-promocao">Promoção</span>
-                        <h1 id="destaque-nome"></h1>
+                        <span class="etiqueta-promocao">PROMOÇÃO</span>
+                        <h1 id="destaque-nome">Carregando...</h1>
                         <p id="destaque-preco"></p>
                     </div>
                     <div class="acoes-destaque">
-                        <button class="botao botao-primario">ADICIONAR AO CARRINHO</button>
-                        <button class="botao botao-secundario">COMPRAR AGORA</button>
+                        <button class="botao botao-primario">Adicionar ao Carrinho</button>
+                        <button class="botao botao-secundario">Comprar agora</button>
                     </div>
                 </div>
                 <div class="area-imagem-destaque">
                     <button class="seta-slider seta-anterior-destaque">&lt;</button>
-                    <img src="" alt="Produto em Destaque" class="calcado-principal" id="destaque-imagem">
+                    <img src="assets/placeholder.png" alt="Produto em Destaque" class="calcado-principal"
+                        id="destaque-imagem">
                     <button class="seta-slider seta-proximo-destaque">&gt;</button>
                     <div class="variantes-calcado" id="destaque-variantes"></div>
                 </div>
@@ -98,23 +100,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="cabecalho-secao">
                     <h2>Destaques</h2>
                 </div>
-                <div class="grade-produtos" id="principais-itens-grid"></div>
+                <div class="grade-produtos" id="principais-itens-grid">
+                </div>
             </div>
         </section>
 
-        <section class="banner-promocional banner-tornozelo-urbano">
-            <div class="conteiner" style="justify-content: center; text-align: center;">
-                <button class="botao botao-claro">COMPRE AGORA</button>
-            </div>
-        </section>
+      <section class="secao-acao-central banner-tornozelo-urbano">
+    <div class="conteiner">
+        <button class="botao botao-claro-outline">COMPRE AGORA</button>
+    </div>
+</section>
 
         <section class="mais-produtos">
             <div class="conteiner">
-                <div class="grade-produtos" id="mais-produtos-grid"></div>
+                <div class="grade-produtos" id="mais-produtos-grid">
+                </div>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="conteiner">
             <div class="conteudo-rodape">
@@ -164,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
     </footer>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

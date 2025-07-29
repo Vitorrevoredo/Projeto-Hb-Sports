@@ -406,4 +406,9 @@
     .banner-promocional p {
         font-size: 0.9em;
     }
+    .cartao-produto-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
 }

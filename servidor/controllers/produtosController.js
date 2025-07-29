@@ -11,7 +11,6 @@ exports.getAllProdutos = (req, res) => {
     });
 };
 
-
 exports.getProdutosPorPagina = (req, res) => {
     const pagina = req.params.pagina;
     const sql = "SELECT * FROM produtos WHERE pagina = ?";
@@ -22,5 +21,22 @@ exports.getProdutosPorPagina = (req, res) => {
             return;
         }
         res.json(rows);
+    });
+};
+
+exports.getProdutoPorId = (req, res) => {
+    const id = req.params.id;
+    const sql = "SELECT * FROM produtos WHERE id = ?";
+
+    db.get(sql, [id], (err, row) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        if (!row) {
+            res.status(404).json({ error: 'Produto não encontrado' });
+            return;
+        }
+        res.json(row);
     });
 };
